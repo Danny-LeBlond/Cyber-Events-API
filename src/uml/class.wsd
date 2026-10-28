@@ -1,0 +1,32 @@
+@startuml
+
+class User { 
+    - email: str
+    - name: str
+    - creation_date: date
+    - last_active: date
+    - key: str 
+
+    + is_active(): boolean
+}
+
+class CyberEvent {
+    - slug: str
+    - event_date: date
+    - year: int 
+    - month: int
+    - actor: str 
+    - actor_type: str
+    - organization: str
+    - industry_code: int
+    - industry: str 
+    - motive: str
+    - event_type: str
+    - event_subtype: str 
+    - description: str
+    - source_url: str
+    - country: str
+    - actor_country: str
+}
+
+@enduml

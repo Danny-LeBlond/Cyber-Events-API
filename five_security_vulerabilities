@@ -1,0 +1,54 @@
+1. No Limit on API Requests
+Affected Component: routes.py (API)
+Description: Right now, users can send unlimited requests to the API.
+Result: This can slow down the system or be used to attack it.
+Recommendation: Add a limit so each user can only send 5 requests per minute.
+
+2. No CAPTCHA on Signup
+Affected Component: signup.html, forms.py
+Description: There’s no check to make sure a real person is signing up.
+Result: Bots can create fake accounts over and over.
+Recommendation: Add a CAPTCHA (like “I’m not a robot”) to stop bots.
+
+3. API Key Can Be Seen More Than Once
+Affected Component: routes.py, models.py
+Description: After signing up, users can see their API key again and again.
+Result: Someone could steal it if they get into the account.
+Recommendation: Show the key just once and keep track if it was already shown.
+
+4. Inactive Users Still Have Access
+Affected Component: routes.py, models.py
+Description: Even if someone hasn’t used the API in over 6 months, they can still use it.
+Result: Old or unused accounts might get misused.
+Recommendation: Block access if the account hasn’t been active in the last 6 months.
+
+5. No Check on Who Can Use the API
+Affected Component: routes.py (API)
+Description: Anyone can try to use the API without being checked.
+Result: People who shouldn’t use it might still get in.
+Recommendation: Add a check to make sure only users with a valid key can use the API.
+
+6. No Protection from Fake Form Submissions
+Affected Component: signup.html, forms.py
+Description: The form doesn’t have security to stop fake signups from other websites.
+Result: A hacker could trick someone into making an account without knowing it.
+Recommendation: Make sure CSRF protection is turned on for all forms.
+
+7. Not Enough Input Checks
+Affected Component: forms.py, routes.py
+Description: We don’t check user input carefully enough.
+Result: Someone could add bad code that breaks things or shows hidden info.
+Recommendation: Make sure all input is clean and safe before saving it.
+
+8. No Login or Password System
+Affected Component: User Registration
+Description: Users don’t create a password or log in after registering.
+Result: Anyone who gets the API key can use the system without real authentication.
+Recommendation: Add a login system that uses email + password, and require login to view the API key.
+
+
+9. No Email Check After Signup
+Affected Component: Signup
+Description: People can sign up with fake or wrong emails, and it still works.
+Result: You could end up with lots of spam accounts.
+Recommendation: Send a confirmation email so only real accounts get created.

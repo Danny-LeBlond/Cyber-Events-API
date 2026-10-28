@@ -1,0 +1,7 @@
+left to right direction
+:User:
+
+package CyberEvents {
+    User --> (sign-up)
+    User --> (search cyber events)
+}
