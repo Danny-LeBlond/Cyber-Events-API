@@ -22,7 +22,7 @@ You are provided with a partially completed implementation of the web app for AP
 
 # Data Model 
 
-The dataset for this project was originally obtained from [Cyber Events Database Home](https://cissm.umd.edu/research-impact/publications/cyber-events-database-home). It has been exported to you in a CSV format and is available at [data/cyber_events.csv](data/cyber_events.csv). The dataset consists of 13,841 cyber events that occurred globally over the past 10 years.
+The dataset for this project was originally obtained from [Cyber Events Database Home](https://www.cpppe.umd.edu/cyber-events-database). It has been exported to you in a CSV format and is available at [data/cyber_events.csv](data/cyber_events.csv). The dataset consists of 13,841 cyber events that occurred globally over the past 10 years.
 
 ![pics/pic2.png](pics/pic2.png)
 
